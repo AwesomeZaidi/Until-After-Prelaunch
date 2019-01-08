@@ -161,6 +161,49 @@ html, body {
     }
 }
 
+@media only screen and (min-device-width : 310px) and (max-device-width : 480px) {
+    html, body {
+        font-size: 12px;
+        main {
+            .top {
+                height: 82vh;
+                .hero-label {
+                    font-size: 3em;
+                }   
+            }
+            .top > * {
+                min-width: 90vw;
+            }
+            .story {
+                padding: 2em 0em;
+                .story-text.bio {
+                    max-width: 90vw;
+                }
+            }
+            .how-works {
+                .slideshow-container {
+                    max-width: 100vw;
+                    .mySlides {
+                        max-width: 90%;
+                        .how-bio {
+                            max-width: none;
+                        }
+                    }
+                    .prev, .next {
+                        margin: 2.4em;
+                        padding: 0;
+                    }
+                }
+            }
+
+        }
+        .centered {
+            top: auto;
+            margin-top: 17em;
+        }
+    }
+}
+
 /* Centered text */
 .centered {
     position: absolute;

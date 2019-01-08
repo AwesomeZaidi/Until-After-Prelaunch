@@ -160,6 +160,43 @@ html footer .credits a, body footer .credits a {
   text-decoration: none;
 }
 
+@media only screen and (min-device-width: 310px) and (max-device-width: 480px) {
+  html, body {
+    font-size: 12px;
+  }
+  html main .top, body main .top {
+    height: 82vh;
+  }
+  html main .top .hero-label, body main .top .hero-label {
+    font-size: 3em;
+  }
+  html main .top > *, body main .top > * {
+    min-width: 90vw;
+  }
+  html main .story, body main .story {
+    padding: 2em 0em;
+  }
+  html main .story .story-text.bio, body main .story .story-text.bio {
+    max-width: 90vw;
+  }
+  html main .how-works .slideshow-container, body main .how-works .slideshow-container {
+    max-width: 100vw;
+  }
+  html main .how-works .slideshow-container .mySlides, body main .how-works .slideshow-container .mySlides {
+    max-width: 90%;
+  }
+  html main .how-works .slideshow-container .mySlides .how-bio, body main .how-works .slideshow-container .mySlides .how-bio {
+    max-width: none;
+  }
+  html main .how-works .slideshow-container .prev, html main .how-works .slideshow-container .next, body main .how-works .slideshow-container .prev, body main .how-works .slideshow-container .next {
+    margin: 2.4em;
+    padding: 0;
+  }
+  html .centered, body .centered {
+    top: auto;
+    margin-top: 17em;
+  }
+}
 /* Centered text */
 .centered {
   position: absolute;
