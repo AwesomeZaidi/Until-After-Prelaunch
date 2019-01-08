@@ -3,9 +3,9 @@ const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 module.exports = (function() {
-    function sendPrelaunchSignupEmail(user) {
+    function sendPrelaunchSignupEmail(email) {
         return new Promise(function(resolve,reject) { 
-            hb.render('views/emails/website-request.hbs', {email} ).then(html => {
+            hb.render('views/emails/signup.hbs', {email} ).then(html => {
                 sgMail.send({
                     to: email,
                     from: `"Until After 👻" <asimzaidih@gmail.com>`,

@@ -5,6 +5,17 @@
   crossorigin="anonymous"></script>
 <header>
     <nav>
+                <style>
+            
+            .donate-input {
+                border: 1px solid;
+                border-color: #6b3792;
+                padding: 1em 2em;
+            }
+            #stripe-form {
+                display: none;
+            }
+        </style>
         <button id="myBtn" class="purple-btn">Donate</button>
 
         <!-- The Modal -->
@@ -12,44 +23,55 @@
             <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
+                <form action="/donate" method="post">
+                <h4 class="sub-heading">Every donation helps :)</h4 >
                 <input
-                id="donationAmount"
-                class="donate-input"
-                type="text"
-                placeholder="Enter Donation Amount">
-                {{!-- <button class="purple-btn"onclick="saveValue()">Save</button> --}}
-            <script>
+                    id="donationAmount"
+                    name="donationAmount"
+                    class="donate-input"
+                    type="text"
+                    placeholder="Enter Donation Amount"
+                    onchange="saveValue()">
+                    <script
+                        id="stripe-form"
+                        src="https://checkout.stripe.com/checkout.js"
+                        class="stripe-button"
+                        data-key="pk_test_W63C5PiHdw3FSQmvVIrgWo6c"	
+                        data-name="Until After"
+                        data-description="Until After donation charge"
+                        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                        data-locale="auto"
+                        >
+                    </script>
+                </form>
+                <script>
                 function saveValue() {
-                    var userDonationAmount =  document.getElementById("donationAmount").value;
+                    $('#stripe-form').attr('data-amount', `${$('#donationAmount').val()}00`);
+                    $('#stripe-form').css('display', 'block');
                 }
             </script>
-            <script src="https://checkout.stripe.com/checkout.js"></script>
-            <form class="stripe-form" action="/donate" method="POST">
-                <script
-                    src="https://checkout.stripe.com/checkout.js"
-                    class="stripe-button"
-                    data-key="pk_test_W63C5PiHdw3FSQmvVIrgWo6c"	
-                    data-amount = `$userDonationAmount`
-                    data-name="Until After"
-                    data-description="Until After donation charge"
-                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-                    data-locale="auto">
-                </script>
-                <button id="myBtn" onclick="saveValue()" class="purple-btn">Donate</button>
-            </form>
+                {{!-- <button class="purple-btn"onclick="saveValue()">Save</button> --}}
 
+            <style>
+                .modal-content {
+                    text-align: center;
+                    margin: 0 auto;
+                    display: block;
+                    font-weight: 400;
+                    max-width: 50%;
+                    background-color: #6b3792;
+                    max-width: 50%;
+                    border-radius: .5em;
+                    border: none;
+                    height: 30vh;
+                }
+                .donate-input {
+                    margin: 1em 2em;
+                    font-size: 1em;
+
+                }
+            </style>
             </div>
         </div>
-        <style>
-            
-            .donate-input {
-                border: 1px solid;
-                border-color: #6b3792;
-                padding: 1em 2em;
-            }
-            .stripe-button-el {
-                display: none;
-            }
-        </style>
     </nav>
 </header>
