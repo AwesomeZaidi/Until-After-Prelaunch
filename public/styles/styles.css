@@ -42,9 +42,9 @@ html main .top .purple-btn.notify, body main .top .purple-btn.notify {
 html main .story, body main .story {
   background-color: #121212;
   text-align: center;
-  padding: 0.5em 0em;
+  padding: 5em 0em;
 }
-html main .story .sub-heading.story, body main .story .sub-heading.story {
+html main .story .sub-heading.story-text, body main .story .sub-heading.story-text {
   color: #ffffff;
 }
 html main .story .story-text.bio, body main .story .story-text.bio {
@@ -52,13 +52,126 @@ html main .story .story-text.bio, body main .story .story-text.bio {
   margin: 0 auto;
   display: block;
   padding-bottom: 2em;
+  line-height: 1.6em;
 }
+html main .how-works, body main .how-works {
+  margin-top: 5em;
+  margin-bottom: 4em;
+  /* Slideshow container */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+  /* The dots/bullets/indicators */
+  /* Fading animation */
+  /* On smaller screens, decrease text size */
+}
+html main .how-works .mySlides, body main .how-works .mySlides {
+  display: none;
+  max-width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+html main .how-works .slideshow-container, body main .how-works .slideshow-container {
+  max-width: 70vw;
+  position: relative;
+  margin: auto;
+}
+html main .how-works .prev, html main .how-works .next, body main .how-works .prev, body main .how-works .next {
+  cursor: pointer;
+  top: 50%;
+  margin: 3em;
+  padding: 0.5em;
+  color: #793ea5;
+  font-weight: bold;
+  font-size: 2.4em;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+html main .how-works .next, body main .how-works .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+html main .how-works .prev:hover, html main .how-works .next:hover, body main .how-works .prev:hover, body main .how-works .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+html main .how-works .dot, body main .how-works .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+html main .how-works .active, html main .how-works .dot:hover, body main .how-works .active, body main .how-works .dot:hover {
+  background-color: #717171;
+}
+html main .how-works .fade, body main .how-works .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 300px) {
+  html main .how-works .prev, html main .how-works .next, html main .how-works .text, body main .how-works .prev, body main .how-works .next, body main .how-works .text {
+    font-size: 11px;
+  }
+}
+html main .how-works .how-icons, body main .how-works .how-icons {
+  font-size: 6em;
+}
+html main .how-works .how-bio, body main .how-works .how-bio {
+  max-width: 65%;
+  font-size: 1.4em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+html footer, body footer {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+  padding-top: 1em;
+}
+html footer .credits, body footer .credits {
+  font-family: monospace;
+  color: #636e72;
+}
+html footer .credits a, body footer .credits a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* Centered text */
 .centered {
   position: absolute;
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.reg-centered {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
 }
 
 .purple-btn {

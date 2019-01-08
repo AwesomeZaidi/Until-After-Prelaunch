@@ -15,6 +15,7 @@
                 us kick start the app as this will be free to use for the time being and our team is dedicating
                 time into the greater good of humanity.
             </p>
+
             <input class="email-input" type="email" placeholder="Enter your email*">
             <button class="purple-btn notify">
                 Get Notified
@@ -24,7 +25,7 @@
 
     <section class="story">
         <div class="horiz-center">
-            <h1 class="sub-heading story">Our Story</h1>
+            <h1 class="sub-heading story-text">Our Story</h1>
             <p class="story-text bio">
                 Hi, my name is Asim and I'm creating Until After because I'm scared,
                 I'm scared I won't live to see tomorrow. The notes app in my phone has been my clutch.
@@ -48,9 +49,86 @@
         </div>
     </section>
 
-    <section class="how-works">
+    <section class="how-works reg-centered">
         {{!-- <div class="centered"> --}}
-            <h1 class="sub-heading">How it Works</h1>
+        <h1 class="sub-heading reg-centered">How it Works</h1>
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <h2>Private Journal</h2>
+                <i class="fas fa-journal-whills how-icons"></i>
+                <p class="how-bio reg-centered">You recieve a private journal in which you can take notes in any time. 
+                    You can easily upload text, photos, videos and voice recordings on the fly.
+                </p>
+            </div>
+            
+            <div class="mySlides fade">
+                <h2>Unique Journal View</h2>
+                <i class="far fa-dot-circle how-icons"></i>
+                <p class="how-bio reg-centered">
+                    We used an advance color scheme graph to allow users to holistically digest
+                    years and years worth of journals easier than ever.
+                </p>
+            </div>
+
+            <div class="mySlides fade">
+                <h2>Choose Openers</h2>
+                <i class="fas fa-user-friends how-icons"></i>
+                <p class="how-bio reg-centered">
+                    Invite up to 5 friends who can have the ability to request access to your account when you die.
+                </p>
+            </div>
+
+            <div class="mySlides fade">
+                <h2>Verification Process</h2>
+                <i class="fas fa-shield-alt how-icons"></i>
+                <p class="how-bio reg-centered">
+                    To verify your death, someone must send us a screen shot of your obituary or death certificate.
+                    We then manually verify the realness of these claims. In addition, we text, email, call and message
+                    you on social medias looking for a response within 30 days. If all checks out, your journal is opened.
+                </p>
+            </div>
+            {{!-- <div class="arrows"> --}}
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            {{!-- </div> --}}
+
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+        </div>
         {{!-- </div> --}}
     </section>
 </main>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+    }
+</script>
