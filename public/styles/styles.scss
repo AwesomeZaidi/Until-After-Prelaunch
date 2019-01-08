@@ -1,0 +1,94 @@
+html, body {
+    margin: 0px;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    header {
+        position: absolute;
+        z-index: 1;
+        right: 0em;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .top {
+            position: relative;
+            text-align: center;
+            background: url(/images/hero-bg.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 90vh;
+    
+            .hero-label {
+                margin-top: 3em;
+                font-size: 5em;
+                color: #ffffff;
+            }
+            .email-input {
+                border: none;
+                color: #6b3792;
+                font-size: 1em;
+                line-height: 1em;
+                padding: .6em 2.2em;
+                font-family: 'Source Sans Pro', sans-serif;
+            }
+            .purple-btn.notify {
+                font-size: 1em;
+            }
+        }
+        .story {
+            background-color: #121212;
+            text-align: center;
+            padding: .5em 0em;
+            .sub-heading.story {
+                color: #ffffff;
+            }
+            .story-text.bio {
+                max-width: 70vw;
+                margin: 0 auto;
+                display: block;
+                padding-bottom: 2em;
+            }
+        }
+        .how-works {
+            
+        }
+    }
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.purple-btn {
+    border: none;
+    background-color: #793ea5;
+    color: #ffffff;
+    font-size: 1.2em;
+    line-height: 1em;
+    padding: .8em 2.2em;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.purple-btn:hover {
+    background-color: #6b3792;
+}
+
+.sub-heading {
+    font-size: 3.4em;
+    letter-spacing: 3px;
+    line-height: 1em;
+}
+
+.bio {
+    font-size: 1.2em;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 1px;
+}

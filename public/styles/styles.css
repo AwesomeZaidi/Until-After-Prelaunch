@@ -1,0 +1,91 @@
+html, body {
+  margin: 0px;
+  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+html header, body header {
+  position: absolute;
+  z-index: 1;
+  right: 0em;
+}
+html main, body main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+html main .top, body main .top {
+  position: relative;
+  text-align: center;
+  background: url(/images/hero-bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 90vh;
+}
+html main .top .hero-label, body main .top .hero-label {
+  margin-top: 3em;
+  font-size: 5em;
+  color: #ffffff;
+}
+html main .top .email-input, body main .top .email-input {
+  border: none;
+  color: #6b3792;
+  font-size: 1em;
+  line-height: 1em;
+  padding: 0.6em 2.2em;
+  font-family: "Source Sans Pro", sans-serif;
+}
+html main .top .purple-btn.notify, body main .top .purple-btn.notify {
+  font-size: 1em;
+}
+html main .story, body main .story {
+  background-color: #121212;
+  text-align: center;
+  padding: 0.5em 0em;
+}
+html main .story .sub-heading.story, body main .story .sub-heading.story {
+  color: #ffffff;
+}
+html main .story .story-text.bio, body main .story .story-text.bio {
+  max-width: 70vw;
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 2em;
+}
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.purple-btn {
+  border: none;
+  background-color: #793ea5;
+  color: #ffffff;
+  font-size: 1.2em;
+  line-height: 1em;
+  padding: 0.8em 2.2em;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.purple-btn:hover {
+  background-color: #6b3792;
+}
+
+.sub-heading {
+  font-size: 3.4em;
+  letter-spacing: 3px;
+  line-height: 1em;
+}
+
+.bio {
+  font-size: 1.2em;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/*# sourceMappingURL=styles.css.map */
