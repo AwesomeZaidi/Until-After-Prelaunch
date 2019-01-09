@@ -5,8 +5,7 @@
   crossorigin="anonymous"></script>
 <header>
     <nav>
-                <style>
-            
+        <style>
             .donate-input {
                 border: 1px solid;
                 border-color: #6b3792;
@@ -15,9 +14,25 @@
             #stripe-form {
                 display: none;
             }
+
+            .modal-content {
+                text-align: center;
+                margin: 0 auto;
+                display: block;
+                font-weight: 400;
+                max-width: 50%;
+                background-color: #6b3792;
+                max-width: 50%;
+                border-radius: .5em;
+                border: none;
+                height: 30vh;
+            }
+            .donate-input {
+                margin: 1em 2em;
+                font-size: 1em;
+            }
         </style>
         <button id="myBtn" class="purple-btn">Donate</button>
-
         <!-- The Modal -->
         <div id="myModal" class="modal">
             <!-- Modal content -->
@@ -51,26 +66,6 @@
                 }
             </script>
                 {{!-- <button class="purple-btn"onclick="saveValue()">Save</button> --}}
-
-            <style>
-                .modal-content {
-                    text-align: center;
-                    margin: 0 auto;
-                    display: block;
-                    font-weight: 400;
-                    max-width: 50%;
-                    background-color: #6b3792;
-                    max-width: 50%;
-                    border-radius: .5em;
-                    border: none;
-                    height: 30vh;
-                }
-                .donate-input {
-                    margin: 1em 2em;
-                    font-size: 1em;
-
-                }
-            </style>
             </div>
         </div>
     </nav>
