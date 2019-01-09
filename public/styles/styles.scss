@@ -40,6 +40,13 @@ html, body {
             form {
                 display: inline;
             }
+            .schedule {
+                max-width: 70%;
+                padding-top: 5em;
+                margin: 0 auto;
+                font-size: 1.3em;
+                color: white;
+            }
         }
         .story {
             background-color: #121212;
@@ -163,13 +170,30 @@ html, body {
         }
     }
 }
-
-@media only screen and (min-device-width : 310px) and (max-device-width : 480px) {
+@media only screen and (min-device-width : 319px) and (max-device-width : 322px) {
     html, body {
         font-size: 12px;
+        header {
+            nav {
+                .modal {
+                    .modal-content {
+                        max-width: none;
+                        height: auto;
+                        form {
+                            h4 {
+                                color: white;
+                                font-size: 2em;
+                                letter-spacing: 1px;
+                                line-height: 1em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         main {
             .top {
-                height: 82vh;
+                height: 135vh;
                 .hero-label {
                     font-size: 3em;
                 }   
@@ -202,7 +226,68 @@ html, body {
         }
         .centered {
             top: auto;
-            margin-top: 17em;
+            margin-top: 25em;
+            height: 110vh;
+        }
+    }
+}
+
+@media only screen and (min-device-width : 324px) and (max-device-width : 480px) {
+    html, body {
+        font-size: 12px;
+        header {
+            nav {
+                .modal {
+                    .modal-content {
+                        max-width: none;
+                        height: auto;
+                        form {
+                            h4 {
+                                font-size: 2em;
+                                letter-spacing: 1px;
+                                line-height: 1em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        main {
+            .top {
+                height: 100vh;
+                .hero-label {
+                    font-size: 3em;
+                }   
+            }
+            .top > * {
+                min-width: 90vw;
+            }
+            .story {
+                padding: 2em 0em;
+                .story-text.bio {
+                    max-width: 90vw;
+                }
+            }
+            .how-works {
+                .slideshow-container {
+                    max-width: 100vw;
+                    .mySlides {
+                        max-width: 90%;
+                        .how-bio {
+                            max-width: none;
+                        }
+                    }
+                    .prev, .next {
+                        margin: 2.4em;
+                        padding: 0;
+                    }
+                }
+            }
+
+        }
+        .centered {
+            top: auto;
+            margin-top: 25em;
         }
     }
 }
